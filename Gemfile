@@ -41,3 +41,6 @@ gem 'spring',        group: :development
 # Twitter Bootstrap 3.2 for Rails 4 Asset Pipeline
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+# Font awesome
+gem "font-awesome-rails"
+
