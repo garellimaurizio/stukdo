@@ -49,3 +49,6 @@ gem 'simple_form'
 
 # Devise
 gem 'devise'
+
+# Auto_html
+gem "auto_html"
