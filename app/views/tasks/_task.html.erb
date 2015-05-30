@@ -20,13 +20,14 @@
 		created <%= time_ago_in_words(task.created_at) %> ago
 		<% end %>
 		
+		<%= link_to "x", task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right" %>
 	</div><!-- end panel-heading -->
 
 	<div class="panel-body">
 		<%= task.content %>
 	</div><!-- end panel-body -->
 
-	<div class="panel-footer">
+	<div class="panel-footer text-center">
 		<% if task.state == "doing" %>
 			<div class="btn-group btn-group-justified">
 				<%= link_to "<i class='fa fa-arrow-left'></i>".html_safe, change_task_path(task, state: "to_do"), method: :put, class: "btn btn-info btn-md btn-block" %>
