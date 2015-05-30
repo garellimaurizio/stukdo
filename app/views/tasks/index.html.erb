@@ -10,16 +10,20 @@
   </thead>
 
   <tbody>
-    <% @to_do.each do |task| %>
-      <tr>
-        <td><%= task.content %></td>
-        <td><%= task.state %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "Mark as Doing", change_task_path(task, state: "doing"), method: :put %></td>
-      </tr>
+    <%= render @to_do %>
+
+<!-- <% @to_do.each do |task| %>
+	    <tr>
+			<td><%= task.content %></td>
+			<td><%= task.state %></td>
+			<td><%= link_to 'Show', task %></td>
+			<td><%= link_to 'Edit', edit_task_path(task) %></td>
+			<td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to "Mark as Doing", change_task_path(task, state: "doing"), method: :put %></td>
+		</tr>
     <% end %>
+-->    
+
   </tbody>
 </table>
 
@@ -37,7 +41,9 @@
   </thead>
 
   <tbody>
-    <% @doing.each do |task| %>
+    <%= render @doing %>
+<!--  <% @doing.each do |task| %>
+
       <tr>
         <td><%= task.content %></td>
         <td><%= task.state %></td>
@@ -48,6 +54,7 @@
         <td><%= link_to "Mark as Done", change_task_path(task, state: "done"), method: :put %></td>
       </tr>
     <% end %>
+-->
   </tbody>
 </table>
 
@@ -65,7 +72,8 @@
   </thead>
 
   <tbody>
-    <% @done.each do |task| %>
+	  <%= render @done %>
+<!-- <% @done.each do |task| %>
       <tr>
         <td><%= task.content %></td>
         <td><%= task.state %></td>
@@ -75,6 +83,7 @@
         <td><%= link_to "Mark as Doing", change_task_path(task, state: "doing"), method: :put %></td>
       </tr>
     <% end %>
+-->    
   </tbody>
 </table>
 
